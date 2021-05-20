@@ -1,0 +1,12 @@
+#profileImg {
+  clip-path: circle(60px);
+  width: 120px;
+}
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #DDD;
+  border-width: 10px;
+  width: 100px;
+}
