@@ -1,12 +1,58 @@
+/* Color palette 
+  Soft gray: #f7f3e9
+  Light Sea Blue: #a3d2ca
+  Sea Blue: #5eaaa8
+  Burnt Orange: #f05945
+
+  You do not need to upload the scss or css.map files to the website.
+  They are just used to create the final css product. 
+*/
+@import url("https://fonts.googleapis.com/css?family=Tomorrow|Varela");
+#experience section, #education section, #skills section {
+  background-color: #8ac4d0;
+  border: 1px solid #e5e5e5;
+  border-radius: 25px;
+  color: #000000;
+  font-family: "Varela";
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+
+body {
+  background-color: #023047;
+  color: #ffffff;
+  font-family: "Tomorrow";
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #profileImg {
-  clip-path: circle(60px);
+  -webkit-clip-path: circle(60px);
+          clip-path: circle(60px);
+  height: 120px;
   width: 120px;
 }
 
 hr {
   border-style: none;
   border-top-style: dotted;
-  border-color: #DDD;
+  border-color: #fca311;
   border-width: 10px;
-  width: 100px;
+  width: 200px;
 }
+/*# sourceMappingURL=styles.css.map */
