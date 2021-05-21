@@ -8,11 +8,40 @@
   They are just used to create the final css product. 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rationale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
-$primaryFontFamily: "Black Ops One";
-$secondaryFontFamily: "Rationale";
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$a1: "Black Ops One"; /* manly primary styled */
+$a2: "Rationale"; /* nice primary styled */
+$a3: "Titillium Web"; /* very nice both smooth */
+$a4: "Exo 2"; /* meh for primary & Secondary */
+$a5: "Merriweather Sans"; /* okay both smooth */
+$a6: "Chakra Petch"; /* nice ridged boxy, nice primary, very nice and clean secondary */
+$a7: "VT323"; /* Pixel, meh */
+$a8: "Aldrich"; /* nice for primary, smooth boxy */
+
+$alt1: "Open Sans";
+$alt2: "Roboto Mono"; /* nice secondary boxy */
+
+$primaryFontFamily: $a6;
+$secondaryFontFamily: $a6;
 
 $primaryColor-dark: #020c1b;
 $primaryColor: #091d3a;
@@ -30,7 +59,7 @@ $borderColor: #e5e5e5;
 
 $lightText: #d1dceb;
 $darkText: #003e77;
-
+/*
 %boxContainer {
   background-color: $secondaryColor;
   border: 1px solid $borderColor;
@@ -41,47 +70,62 @@ $darkText: #003e77;
   margin: 5px;
   display: inline-block;
 }
-
+*/
 body {
   background-color: $primaryColor;
   color: $lightText;
   font-family: $secondaryFontFamily;
-  margin: 0 auto;
 }
 
 main {
-  margin: 0 auto;
-}
-
-header {
   display: flex;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
   padding: 0px;
+  margin: 0;
   width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+}
+
+header {
+  margin: 0 auto;
+  width: 80%;
+}
+
 #heading h1 {
-  font-weight: 400;
+  margin: 0px 0px 30px 4px;
+  font-weight: 600;
   font-family: $primaryFontFamily;
-  font-size: clamp(2.5rem, 2.5vw, 4rem);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  text-shadow: 4px 4px 8px $primaryColor-dark;
 }
 
 #heading h2 {
+  margin: 0px 0px 30px 4px;
+  font-weight: 400;
+  font-family: $primaryFontFamily;
+  font-size: clamp(2rem, 7vw, 3rem);
+}
+
+#heading h3 {
+  margin: 0px 0px 30px 4px;
   font-weight: 400;
   font-family: $secondaryFontFamily;
+  font-size: clamp(0.5rem, 5vw, 2rem);
 }
 
 #profileImg {
+  display: none;
   clip-path: circle(60px);
   height: 120px;
   width: 120px;
 }
-
+/*
 hr {
   border-style: none;
   border-top-style: dotted;
@@ -93,3 +137,4 @@ hr {
 #experience section, #education section, #skills section{
   @extend %boxContainer;
 }
+*/

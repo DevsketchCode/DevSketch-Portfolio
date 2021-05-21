@@ -7,38 +7,50 @@
   You do not need to upload the scss or css.map files to the website.
   They are just used to create the final css product. 
 */
-@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Rationale&display=swap");
-#experience section, #education section, #skills section {
-  background-color: #7987b1;
-  border: 1px solid #e5e5e5;
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* manly primary styled */
+/* nice primary styled */
+/* very nice both smooth */
+/* meh for primary & Secondary */
+/* okay both smooth */
+/* nice ridged boxy, nice primary, very nice and clean secondary */
+/* Pixel, meh */
+/* nice for primary, smooth boxy */
+/* nice secondary boxy */
+/*
+%boxContainer {
+  background-color: $secondaryColor;
+  border: 1px solid $borderColor;
   border-radius: 25px;
-  color: #003e77;
-  font-family: "Rationale";
+  color: $darkText;
+  font-family: $secondaryFontFamily;
   padding: 5px;
   margin: 5px;
   display: inline-block;
 }
-
+*/
 body {
   background-color: #091d3a;
   color: #d1dceb;
-  font-family: "Rationale";
-  margin: 0 auto;
+  font-family: "Chakra Petch";
 }
 
 main {
-  margin: 0 auto;
-}
-
-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -webkit-box-align: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -48,32 +60,60 @@ header {
           align-items: flex-start;
   min-height: 100vh;
   padding: 0px;
+  margin: 0;
   width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+}
+
+header {
+  margin: 0 auto;
+  width: 80%;
+}
+
 #heading h1 {
-  font-weight: 400;
-  font-family: "Black Ops One";
-  font-size: clamp(2.5rem, 2.5vw, 4rem);
+  margin: 0px 0px 30px 4px;
+  font-weight: 600;
+  font-family: "Chakra Petch";
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  text-shadow: 4px 4px 8px #020c1b;
 }
 
 #heading h2 {
+  margin: 0px 0px 30px 4px;
   font-weight: 400;
-  font-family: "Rationale";
+  font-family: "Chakra Petch";
+  font-size: clamp(2rem, 7vw, 3rem);
+}
+
+#heading h3 {
+  margin: 0px 0px 30px 4px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+  font-size: clamp(0.5rem, 5vw, 2rem);
 }
 
 #profileImg {
+  display: none;
   -webkit-clip-path: circle(60px);
           clip-path: circle(60px);
   height: 120px;
   width: 120px;
 }
 
+/*
 hr {
   border-style: none;
   border-top-style: dotted;
-  border-color: #fca311;
+  border-color: $accentColor;
   border-width: 10px;
   width: 200px;
 }
+
+#experience section, #education section, #skills section{
+  @extend %boxContainer;
+}
+*/
 /*# sourceMappingURL=styles.css.map */
