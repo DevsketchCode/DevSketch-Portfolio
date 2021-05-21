@@ -8,25 +8,35 @@
   They are just used to create the final css product. 
 */
 
-@import url("https://fonts.googleapis.com/css?family=Tomorrow|Varela");
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rationale&display=swap');
 
-$primaryText: "Tomorrow";
-$secondaryText: "Varela";
+$primaryFontFamily: "Black Ops One";
+$secondaryFontFamily: "Rationale";
 
-$primaryColor: #023047;
-$secondColor: #8ac4d0;
+$primaryColor-dark: #020c1b;
+$primaryColor: #091d3a;
+$primaryColor-light: #12274b;
+$primaryColor-lightest: #253c64;
+
+$secondaryColor-dark: #3b4966;
+$secondaryColor: #7987b1;
+$secondaryColor-light: #a2afd8;
+$secondaryColor-lightest: #bac8f7;
+
+
 $accentColor: #fca311;
 $borderColor: #e5e5e5;
 
-$lightText: #ffffff;
-$darkText: #000000;
+$lightText: #d1dceb;
+$darkText: #003e77;
 
 %boxContainer {
-  background-color: $secondColor;
+  background-color: $secondaryColor;
   border: 1px solid $borderColor;
   border-radius: 25px;
   color: $darkText;
-  font-family: $secondaryText;
+  font-family: $secondaryFontFamily;
   padding: 5px;
   margin: 5px;
   display: inline-block;
@@ -35,15 +45,35 @@ $darkText: #000000;
 body {
   background-color: $primaryColor;
   color: $lightText;
-  font-family: $primaryText;
+  font-family: $secondaryFontFamily;
+  margin: 0 auto;
+}
+
+main {
+  margin: 0 auto;
 }
 
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0px;
+  width: 100%;
+}
 
+#heading h1 {
+  font-weight: 400;
+  font-family: $primaryFontFamily;
+  font-size: clamp(2.5rem, 2.5vw, 4rem);
+}
+
+#heading h2 {
+  font-weight: 400;
+  font-family: $secondaryFontFamily;
 }
 
 #profileImg {

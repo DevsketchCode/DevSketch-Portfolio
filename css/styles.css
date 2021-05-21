@@ -7,38 +7,59 @@
   You do not need to upload the scss or css.map files to the website.
   They are just used to create the final css product. 
 */
-@import url("https://fonts.googleapis.com/css?family=Tomorrow|Varela");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Rationale&display=swap");
 #experience section, #education section, #skills section {
-  background-color: #8ac4d0;
+  background-color: #7987b1;
   border: 1px solid #e5e5e5;
   border-radius: 25px;
-  color: #000000;
-  font-family: "Varela";
+  color: #003e77;
+  font-family: "Rationale";
   padding: 5px;
   margin: 5px;
   display: inline-block;
 }
 
 body {
-  background-color: #023047;
-  color: #ffffff;
-  font-family: "Tomorrow";
+  background-color: #091d3a;
+  color: #d1dceb;
+  font-family: "Rationale";
+  margin: 0 auto;
+}
+
+main {
+  margin: 0 auto;
 }
 
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 100vh;
+  padding: 0px;
+  width: 100%;
+}
+
+#heading h1 {
+  font-weight: 400;
+  font-family: "Black Ops One";
+  font-size: clamp(2.5rem, 2.5vw, 4rem);
+}
+
+#heading h2 {
+  font-weight: 400;
+  font-family: "Rationale";
 }
 
 #profileImg {
