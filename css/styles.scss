@@ -40,7 +40,7 @@ $a8: "Aldrich"; /* nice for primary, smooth boxy */
 $alt1: "Open Sans";
 $alt2: "Roboto Mono"; /* nice secondary boxy */
 
-$primaryFontFamily: $a6;
+$primaryFontFamily: $a8;
 $secondaryFontFamily: $a6;
 
 $primaryColor-dark: #020c1b;
@@ -55,37 +55,30 @@ $secondaryColor-lightest: #bac8f7;
 
 
 $accentColor: #fca311;
+$accentColor-dim: #915d0a;
 $borderColor: #e5e5e5;
 
 $lightText: #d1dceb;
 $darkText: #003e77;
-/*
+
 %boxContainer {
-  background-color: $secondaryColor;
-  border: 1px solid $borderColor;
+  background-color: $primaryColor-light;
+  border: 1px solid $primaryColor;
   border-radius: 25px;
-  color: $darkText;
-  font-family: $secondaryFontFamily;
-  padding: 5px;
-  margin: 5px;
+  color: $lightText;
   display: inline-block;
+  font-family: $secondaryFontFamily;
+  padding: 15px;
+  margin: 5px;
+  text-shadow: 2px 2px 4px $primaryColor-dark;
+  box-shadow: 4px 4px 8px $primaryColor-dark;
 }
-*/
-body {
+
+body, a {
   background-color: $primaryColor;
   color: $lightText;
   font-family: $secondaryFontFamily;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 0px;
-  margin: 0;
-  width: 100%;
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -93,10 +86,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;  
+  padding: 0px;
+  position: relative;
   margin: 0 auto;
-  width: 80%;
+  width: 70%;
 }
 
+// Name
 #heading h1 {
   margin: 0px 0px 30px 4px;
   font-weight: 600;
@@ -105,36 +106,217 @@ header {
   text-shadow: 4px 4px 8px $primaryColor-dark;
 }
 
+// Phrase
 #heading h2 {
   margin: 0px 0px 30px 4px;
   font-weight: 400;
-  font-family: $primaryFontFamily;
+  font-family: $secondaryFontFamily;
   font-size: clamp(2rem, 7vw, 3rem);
 }
 
+// Greeting
 #heading h3 {
   margin: 0px 0px 30px 4px;
   font-weight: 400;
   font-family: $secondaryFontFamily;
-  font-size: clamp(0.5rem, 5vw, 2rem);
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
-#profileImg {
-  display: none;
-  clip-path: circle(60px);
-  height: 120px;
-  width: 120px;
+#introduction {
+  width: 50%;
 }
-/*
-hr {
+
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;  
+  padding: 0px;
+  position: relative;
+  margin: 0 auto;
+  width: 70%;
+}
+
+main > h2 {
+  margin-top: 50px;
+  text-shadow: 2px 2px 4px $primaryColor-dark;
+  width: 100%;
+}
+
+main > h2 > hr {
+  margin: auto 30px;
+  padding: auto 0;
+  vertical-align: middle;
+  display: inline-block;
+  width: 60%;
+}
+
+main > hr {
   border-style: none;
   border-top-style: dotted;
   border-color: $accentColor;
   border-width: 10px;
   width: 200px;
+  margin-top: 50px;
+  margin-bottom: 0px;
 }
 
-#experience section, #education section, #skills section{
+#education section, #skills section{
   @extend %boxContainer;
+  display: flex;
+  flex-direction: column;
 }
-*/
+
+#workExperience {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+ul {
+  margin: 0 10px 0 0;
+  padding: 0 10px 10px 10px;
+}
+
+#workExperience > ul > li {
+  list-style-type: none;
+  border-left: 2px solid $accentColor-dim;
+  font-size: 1em;
+  padding: 10px;
+}
+
+#workExperience > ul > li:hover {
+  background-color: $primaryColor-light;
+  border-left: 2px solid $accentColor;
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #020c1b
+}
+
+#j1 {
+  background-color: $primaryColor-light;
+  border-left: 5px solid $accentColor;
+}
+
+#workExperienceContentContainer {
+  position: relative;
+  background-color: $secondaryColor-lightest;
+  border: 1px solid $primaryColor-dark;
+  width: 670px;
+  height: 400px;
+  margin-bottom: 10em;
+  overflow: auto;
+}
+
+#workExperienceContentContainer::-webkit-scrollbar {
+  background-color: $secondaryColor;
+  width: 10px;
+}
+
+/* Track */
+#workExperienceContentContainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px $secondaryColor; 
+}
+
+/* Handle */
+#workExperienceContentContainer::-webkit-scrollbar-thumb {
+  border: 1px solid $primaryColor;
+  background: $primaryColor-lightest;
+}
+
+/* Handle on hover */
+#workExperienceContentContainer::-webkit-scrollbar-thumb:hover {
+    background: $secondaryColor-dark;
+}
+
+
+#j2_details, #j3_details, #j4_details, #j5_details {
+  display: none;
+}
+
+.workExperienceContent {
+  position: absolute; 
+  left: 0;
+  top: 0;
+  padding: 0 20px 0 20px; 
+  color:$darkText;
+}
+
+#profileImg {
+  position: absolute;
+  right: 10%;
+  clip-path: circle(120px);
+  height: 240px;
+  width: 240px;
+  text-indent:-9999px
+}
+
+.profileImage {
+  content: url('../images/profile_image_sm.jpg');
+}
+
+.glitchEffect {
+  content: '';
+  text-align:center;
+  justify-content:center;
+  position: absolute;
+  width:100%;
+  height:100%;
+  background: url('../images/profile_image_sm.jpg');
+  background-size: cover;
+}
+.glitchEffect:before{
+  content: '';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: url('../images/profile_image_sm.jpg');
+  background-size: cover;
+  mix-blend-mode:hard-light;
+ 
+}
+.glitchEffect:before{
+  animation:animate .4s;
+}
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+    filter:hue-rotate(0deg);
+  }
+  10%{
+    background-position: 4px 0px;
+  }
+  15%{
+    background-position: -8px 0px;
+  }
+  
+  20%{
+    background-position: -4px 0;
+  }
+  30%{
+    background-position: 12px 0;
+  }
+  40%{
+    background-position: -12px 0;
+  }
+  50%{
+    background-position: -20px 0;
+  }
+  60%{
+    background-position: 16px 0;
+  }
+  70%{
+    background-position: 0 22px;
+  }
+  80%{
+    background-position: -20px 10px;
+  }
+  100%{
+    background-position: 0 0;
+    filter:hue-rotate(360deg);
+  }
+}

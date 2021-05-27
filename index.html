@@ -11,92 +11,107 @@
     <nav>
 
     </nav>
-    <main>
-      <header>
-        <section id="heading">
-          <h3>Hi, my name is </h3>
-          <h1>David Oberlander</h1>
-          <h2>I Love Code</h2>
-          <img id="profileImg" src="images/profile_image_sm.jpg" alt="David Oberlander Profile Image">
-        </section>
-        <section id="introduction">
-          <p id="aboutMe">I am currently a student at Chippewa Valley Technical College in Wisconsin.  I am going for an Associates Degree in Applied Science, majoring in software development.  I have always had a passion for learning, especially when it comes to development.</p>
-        </section>
-      </header>
-      <!--
+    <header>
+      <section id="heading">
+        <img id="profileImg" class="profileImage" alt="David Oberlander Profile Image">          
+        <h3>Hi, my name is</h3>
+        <h1>David Oberlander</h1>
+        <h2 id="subheading">I am a developer.</h2>
+      </section>
+
       <section id="introduction">
-        <hr>
         <p id="aboutMe">I am currently a student at Chippewa Valley Technical College in Wisconsin.  I am going for an Associates Degree in Applied Science, majoring in software development.  I have always had a passion for learning, especially when it comes to development.</p>
       </section>
-      <section id="experience">
-        <h2>Experience</h2>
-        <section>
-          <h3>Royal Credit Union: September 2018 - Present</h3>
-          <p>Member Service Representative II</p>
-          <ul>
-            <li>Assisted members with transactions, banking questions, etc.</li>
-            <li>Created an ID Randomizer using VBScript in Excel to randomize verification questions.</li>
-            <li>Maintained an Access Database call log for the department and archiving the data using SQL.</li>
-            <li>Developed an online banking simulator using XHTML, CSS, and JavaScript in between calls.</li>
-            <li>Presented that simulator to the Executive Team which then rolled it out to the rest of the company to use.</li>
-            <li>Promoted to the Member Service Tech Team, supporting members with technical issues.</li>
-            <li>Setup and administered an online e-mail support platform called FreshDesk.</li>
-            <li>Assisted in designing and beta testing a new call log.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Morrie's Chippewa Valley Mazda: June 2017 - September 2018</h3>
-          <p>Business Development Representative</p>
-          <ul>
-            <li>Created appointments for both sales and service.</li>
-            <li>Developed more business through outbound calls.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Hampton Inn &amp; Suites of Chippewa Falls: January 2016 - Present</h3>
-          <p>Front Desk - Guest Services Agent</p>
-          <ul>
-            <li>Created and managed reservations for guests.</li>
-            <li>Assisted in training new associates with the software and procedures.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Radiantly Shine Cleaning Service: August 2015 - May 2017</h3>
-          <p>Owner</p>
-          <ul>
-            <li>Cleaned the interior of residential and commercial buildings.</li>
-            <li>Managed business finances.</li>
-            <li>Developed and maintained the business website.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>IDEXX Laboratories: June 2011 - July 2015</h3>
-          <p>Database Conversion Technician / Customer Support Consultant III</p>
-          <ul>
-            <li>Converted data from veterinary clinic's previous software into IDEXX Cornerstone software.</li>
-            <li>Customized the in-house conversion software using C#, Java, or C++.</li>
-            <li>Assisted in developing different tools to help improve workflow.</li>
-            <li>Completed database conversions and validation utilizing SQL.</li>
-            <li>Implemented the databases to the clinics remotely.</li>
-          </ul>
-          <p>Customer Support Consultant I</p>
-          <ul>
-            <li>Assisted veterinary clinics with technical issues and workflow processes.</li>
-            <li>Trained clinic staff on different features of Cornerstone.</li>
-            <li>Utilized SQL to research the cornerstone database to resolve issues.</li>
-          </ul>
-        </section>
+    </header>
+    <main>
+      <hr>
+      <h2>Work Experience<hr></h2>
+      <section id="workExperience">
+        <ul>
+          <li id="j1">Royal Credit Union</li>
+          <li id="j2">Morrie's Chippewa Valley Mazda</li>
+          <li id="j3">Hampton Inn &amp; Suites of Chippewa Falls</li>
+          <li id="j4">Radiantly Shine Cleaning Service</li>
+          <li id="j5">IDEXX Laboratories</li>
+        </ul>
+        <div id="workExperienceContentContainer">
+          <section class="workExperienceContent" id="j1_details">
+            <h2>Royal Credit Union: </h2>
+            <h3>September 2018 - Present</h3>
+            <p>Member Service Representative II</p>
+            <ul>
+              <li>Assisted members with transactions, banking questions, etc.</li>
+              <li>Created an ID Randomizer using VBScript in Excel to randomize verification questions.</li>
+              <li>Maintained an Access Database call log for the department and archiving the data using SQL.</li>
+              <li>Developed an online banking simulator using XHTML, CSS, and JavaScript in between calls.</li>
+              <li>Presented that simulator to the Executive Team which then rolled it out to the rest of the company to use.</li>
+              <li>Promoted to the Member Service Tech Team, supporting members with technical issues.</li>
+              <li>Setup and administered an online e-mail support platform called FreshDesk.</li>
+              <li>Assisted in designing and beta testing a new call log.</li>
+            </ul>
+          </section>
+          <section class="workExperienceContent" id="j2_details">
+            <h2>Morrie's Chippewa Valley Mazda</h2>
+            <h3>June 2017 - September 2018</h3>
+            <p>Business Development Representative</p>
+            <ul>
+              <li>Created appointments for both sales and service.</li>
+              <li>Developed more business through outbound calls.</li>
+            </ul>
+          </section>
+          <section class="workExperienceContent" id="j3_details">
+            <h2>Hampton Inn &amp; Suites of Chippewa Falls</h2>
+            <h3>January 2016 - Present</h3>
+            <p>Front Desk - Guest Services Agent</p>
+            <ul>
+              <li>Created and managed reservations for guests.</li>
+              <li>Assisted in training new associates with the software and procedures.</li>
+            </ul>
+          </section>
+          <section class="workExperienceContent" id="j4_details">
+            <h2>Radiantly Shine Cleaning Service</h2>
+            <h3>August 2015 - May 2017</h3>
+            <p>Owner</p>
+            <ul>
+              <li>Cleaned the interior of residential and commercial buildings.</li>
+              <li>Managed business finances.</li>
+              <li>Developed and maintained the business website.</li>
+            </ul>
+          </section>
+          <section class="workExperienceContent" id="j5_details">
+            <h2>IDEXX Laboratories</h2>
+            <h3>June 2011 - July 2015</h3>
+            <p>Database Conversion Technician / Customer Support Consultant III</p>
+            <ul>
+              <li>Converted data from veterinary clinic's previous software into IDEXX Cornerstone software.</li>
+              <li>Customized the in-house conversion software using C#, Java, or C++.</li>
+              <li>Assisted in developing different tools to help improve workflow.</li>
+              <li>Completed database conversions and validation utilizing SQL.</li>
+              <li>Implemented the databases to the clinics remotely.</li>
+            </ul>
+            <p>Customer Support Consultant I</p>
+            <ul>
+              <li>Assisted veterinary clinics with technical issues and workflow processes.</li>
+              <li>Trained clinic staff on different features of Cornerstone.</li>
+              <li>Utilized SQL to research the cornerstone database to resolve issues.</li>
+            </ul>
+          </section>          
+        </div>
       </section>
+
+      <hr>
+      <h2>Education</h2>
       <section id="education">
-        <h2>Education</h2>
         <section>
           <h3>Chippewa Valley Technical College</h3>
           <p>Associates Degree in Applied Science - Software Developer</p>
           <p>Credits: 6/60 — GPA 4.00</p>
         </section>
       </section>
+
+      <hr>
+      <h2>Skills</h2>
       <section id="skills">
-        <h3>Skills</h3>
         <section>
           <ul>
             <li>HTML(5)</li>
@@ -112,10 +127,11 @@
           </ul>
         </section>
       </section>
-    -->
     </main>
     <footer>
 
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/profile.js"></script>
   </body>
 </html>

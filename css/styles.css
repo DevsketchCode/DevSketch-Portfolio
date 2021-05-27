@@ -26,22 +26,76 @@
 /* Pixel, meh */
 /* nice for primary, smooth boxy */
 /* nice secondary boxy */
-/*
-%boxContainer {
-  background-color: $secondaryColor;
-  border: 1px solid $borderColor;
+#education section, #skills section {
+  background-color: #12274b;
+  border: 1px solid #091d3a;
   border-radius: 25px;
-  color: $darkText;
-  font-family: $secondaryFontFamily;
-  padding: 5px;
-  margin: 5px;
+  color: #d1dceb;
   display: inline-block;
+  font-family: "Chakra Petch";
+  padding: 15px;
+  margin: 5px;
+  text-shadow: 2px 2px 4px #020c1b;
+  -webkit-box-shadow: 4px 4px 8px #020c1b;
+          box-shadow: 4px 4px 8px #020c1b;
 }
-*/
-body {
+
+body, a {
   background-color: #091d3a;
   color: #d1dceb;
   font-family: "Chakra Petch";
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 100vh;
+  padding: 0px;
+  position: relative;
+  margin: 0 auto;
+  width: 70%;
+}
+
+#heading h1 {
+  margin: 0px 0px 30px 4px;
+  font-weight: 600;
+  font-family: "Aldrich";
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  text-shadow: 4px 4px 8px #020c1b;
+}
+
+#heading h2 {
+  margin: 0px 0px 30px 4px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+  font-size: clamp(2rem, 7vw, 3rem);
+}
+
+#heading h3 {
+  margin: 0px 0px 30px 4px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+#introduction {
+  width: 50%;
 }
 
 main {
@@ -60,60 +114,246 @@ main {
           align-items: flex-start;
   min-height: 100vh;
   padding: 0px;
-  margin: 0;
+  position: relative;
+  margin: 0 auto;
+  width: 70%;
+}
+
+main > h2 {
+  margin-top: 50px;
+  text-shadow: 2px 2px 4px #020c1b;
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.1;
+main > h2 > hr {
+  margin: auto 30px;
+  padding: auto 0;
+  vertical-align: middle;
+  display: inline-block;
+  width: 60%;
 }
 
-header {
-  margin: 0 auto;
-  width: 80%;
+main > hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #fca311;
+  border-width: 10px;
+  width: 200px;
+  margin-top: 50px;
+  margin-bottom: 0px;
 }
 
-#heading h1 {
-  margin: 0px 0px 30px 4px;
-  font-weight: 600;
-  font-family: "Chakra Petch";
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  text-shadow: 4px 4px 8px #020c1b;
+#education section, #skills section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#heading h2 {
-  margin: 0px 0px 30px 4px;
-  font-weight: 400;
-  font-family: "Chakra Petch";
-  font-size: clamp(2rem, 7vw, 3rem);
+#workExperience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
 }
 
-#heading h3 {
-  margin: 0px 0px 30px 4px;
-  font-weight: 400;
-  font-family: "Chakra Petch";
-  font-size: clamp(0.5rem, 5vw, 2rem);
+ul {
+  margin: 0 10px 0 0;
+  padding: 0 10px 10px 10px;
+}
+
+#workExperience > ul > li {
+  list-style-type: none;
+  border-left: 2px solid #915d0a;
+  font-size: 1em;
+  padding: 10px;
+}
+
+#workExperience > ul > li:hover {
+  background-color: #12274b;
+  border-left: 2px solid #fca311;
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #020c1b;
+}
+
+#j1 {
+  background-color: #12274b;
+  border-left: 5px solid #fca311;
+}
+
+#workExperienceContentContainer {
+  position: relative;
+  background-color: #bac8f7;
+  border: 1px solid #020c1b;
+  width: 670px;
+  height: 400px;
+  margin-bottom: 10em;
+  overflow: auto;
+}
+
+#workExperienceContentContainer::-webkit-scrollbar {
+  background-color: #7987b1;
+  width: 10px;
+}
+
+/* Track */
+#workExperienceContentContainer::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px #7987b1;
+          box-shadow: inset 0 0 2px #7987b1;
+}
+
+/* Handle */
+#workExperienceContentContainer::-webkit-scrollbar-thumb {
+  border: 1px solid #091d3a;
+  background: #253c64;
+}
+
+/* Handle on hover */
+#workExperienceContentContainer::-webkit-scrollbar-thumb:hover {
+  background: #3b4966;
+}
+
+#j2_details, #j3_details, #j4_details, #j5_details {
+  display: none;
+}
+
+.workExperienceContent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 20px 0 20px;
+  color: #003e77;
 }
 
 #profileImg {
-  display: none;
-  -webkit-clip-path: circle(60px);
-          clip-path: circle(60px);
-  height: 120px;
-  width: 120px;
+  position: absolute;
+  right: 10%;
+  -webkit-clip-path: circle(120px);
+          clip-path: circle(120px);
+  height: 240px;
+  width: 240px;
+  text-indent: -9999px;
 }
 
-/*
-hr {
-  border-style: none;
-  border-top-style: dotted;
-  border-color: $accentColor;
-  border-width: 10px;
-  width: 200px;
+.profileImage {
+  content: url("../images/profile_image_sm.jpg");
 }
 
-#experience section, #education section, #skills section{
-  @extend %boxContainer;
+.glitchEffect {
+  content: '';
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../images/profile_image_sm.jpg");
+  background-size: cover;
 }
-*/
+
+.glitchEffect:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/profile_image_sm.jpg");
+  background-size: cover;
+  mix-blend-mode: hard-light;
+}
+
+.glitchEffect:before {
+  -webkit-animation: animate .4s;
+          animation: animate .4s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  10% {
+    background-position: 4px 0px;
+  }
+  15% {
+    background-position: -8px 0px;
+  }
+  20% {
+    background-position: -4px 0;
+  }
+  30% {
+    background-position: 12px 0;
+  }
+  40% {
+    background-position: -12px 0;
+  }
+  50% {
+    background-position: -20px 0;
+  }
+  60% {
+    background-position: 16px 0;
+  }
+  70% {
+    background-position: 0 22px;
+  }
+  80% {
+    background-position: -20px 10px;
+  }
+  100% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  10% {
+    background-position: 4px 0px;
+  }
+  15% {
+    background-position: -8px 0px;
+  }
+  20% {
+    background-position: -4px 0;
+  }
+  30% {
+    background-position: 12px 0;
+  }
+  40% {
+    background-position: -12px 0;
+  }
+  50% {
+    background-position: -20px 0;
+  }
+  60% {
+    background-position: 16px 0;
+  }
+  70% {
+    background-position: 0 22px;
+  }
+  80% {
+    background-position: -20px 10px;
+  }
+  100% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
 /*# sourceMappingURL=styles.css.map */
