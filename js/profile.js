@@ -1,5 +1,8 @@
 $(function() {
 
+
+
+
   // Start subheading Animation
   subheadingAnimation();
 
@@ -29,6 +32,10 @@ $(function() {
 
 }).scroll(function() {
   var y = $(this).scrollTop();
+
+  // Fresh start, fade out all the fields necessary
+  $('#workExperience').fadeOut();
+
   if (y > 250) {
     $('#workExperience').fadeIn(1000);
   } else {
