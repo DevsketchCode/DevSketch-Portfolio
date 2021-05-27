@@ -16,11 +16,11 @@ $(function() {
       job = index+1;
       if (('#j' + job + "_details") == selectedLink) {
         $('#j' + job).css({"border-left-color":"#fca311", "background-color":"#12274b", "font-weight":"600", "text-shadow":"2px 2px 2px #020c1b"});
-        $('#' + jobs[index].id).fadeIn();
+        $('#' + jobs[index].id).fadeIn(350);
 
       } else {
         $('#j' + job).css({"border-left-color":"#915d0a", "background-color":"#091d3a", "font-weight":"normal", "text-shadow":"none"});
-        $('#' + jobs[index].id).fadeOut();
+        $('#' + jobs[index].id).fadeOut(350);
 
       }
     }); 
