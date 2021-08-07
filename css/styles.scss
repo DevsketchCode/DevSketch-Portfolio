@@ -320,3 +320,37 @@ ul {
     filter:hue-rotate(360deg);
   }
 }
+
+.icons {
+  font-size: 5em;
+  list-style-type: none;
+  display: inline-block;
+  padding: 5px;
+}
+
+.icons-textOnly {
+  color: #3d8fc6;
+  display: inline-block;
+  font-family: "devicon" !important;
+  font-size: .31em;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1;
+  list-style-type: none;
+  text-align: center;
+}
+
+.gitHubCard {
+  border: 1px solid $primaryColor-dark;
+  border-radius: 30px 30px;
+  background-color: $primaryColor-light;
+  font-color: black;
+  padding: 20px;
+}
+
+footer {
+  margin: 30px 0px;
+  padding: 20px;
+  text-align: center;
+}
