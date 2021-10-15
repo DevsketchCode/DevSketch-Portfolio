@@ -26,7 +26,7 @@
 /* Pixel, meh */
 /* nice for primary, smooth boxy */
 /* nice secondary boxy */
-#education section, #skills section {
+#education section, #skills section, .gitHubCard {
   background-color: #12274b;
   border: 1px solid #091d3a;
   border-radius: 25px;
@@ -143,7 +143,7 @@ main > hr {
   margin-bottom: 0px;
 }
 
-#education section, #skills section {
+#education section, #skills section, .gitHubCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,12 +377,70 @@ ul {
   text-align: center;
 }
 
-.gitHubCard {
-  border: 1px solid #020c1b;
-  border-radius: 30px 30px;
-  background-color: #12274b;
-  font-color: black;
-  padding: 20px;
+.card {
+  font-family: sans-serif;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 300px;
+  color: #333;
+}
+
+.card a {
+  color: #cf3f02;
+  text-decoration: none;
+}
+
+.card article > header {
+  min-height: auto;
+}
+
+.card .card-header {
+  padding: 24px 16px;
+}
+
+.card .card-header + .card-body {
+  margin-top: -24px;
+  padding-top: 0;
+}
+
+.card .card-suptitle {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.card .card-title {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.card .card-title a, .card .card-title a:visited {
+  color: inherit;
+}
+
+.card .card-details {
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 16px 16px;
+  margin: 24px 0;
+}
+
+.card .card-details dt, .card .card-details dd {
+  float: left;
+}
+
+.card .card-details dt {
+  padding-right: 8px;
+}
+
+.card .card-details dd {
+  margin: 0;
+  padding-right: 16px;
 }
 
 footer {

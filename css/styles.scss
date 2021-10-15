@@ -163,7 +163,7 @@ main > hr {
   margin-bottom: 0px;
 }
 
-#education section, #skills section{
+#education section, #skills section, .gitHubCard {
   @extend %boxContainer;
   display: flex;
   flex-direction: column;
@@ -341,13 +341,18 @@ ul {
   text-align: center;
 }
 
-.gitHubCard {
-  border: 1px solid $primaryColor-dark;
-  border-radius: 30px 30px;
-  background-color: $primaryColor-light;
-  font-color: black;
-  padding: 20px;
-}
+.card {
+  font-family: sans-serif;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 300px;
+  color: #333;
+  
+  a {
+    color: #cf3f02;
+    text-decoration: none;
+  }
+
 
 footer {
   margin: 30px 0px;
