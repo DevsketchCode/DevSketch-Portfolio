@@ -3,12 +3,15 @@
 
     // Gets the full repo name from the data attribute and
     // fetches the data from the api.
-    $('[data-gh-project]').each(function() {
-      var $proj = $(this);
-      var repo = $proj.data('gh-project');
-      $.get('https://api.github.com/repos/' + repo).success(function(data) {
-        $proj.find('.fork a').text(data.forks_count);
-        $proj.find('.star a').text(data.stargazers_count);
+    $('[data-github]').each(function () {
+      var _this = this;
+      var repo = $(_this).data('github')
+    
+      fetch('https://api.github.com/repos/' + repo).then(function (response) {
+        return response.json();
+      }).then(function (response) {
+        $(_this).find('[data-forks]').text(response.forks);
+        $(_this).find('[data-stars]').text(response.stargazers_count);
       });
     });
 
