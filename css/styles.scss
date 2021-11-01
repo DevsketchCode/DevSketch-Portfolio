@@ -168,6 +168,7 @@ main > hr {
   @extend %boxContainer;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 #workExperience {
@@ -323,7 +324,7 @@ ul {
 }
 
 .icons {
-  font-size: 5em;
+  font-size: 4em;
   list-style-type: none;
   display: inline-block;
   padding: 5px;
@@ -368,6 +369,17 @@ $color-github: #4078c0;
 $gray: #ccc;
 $text: #555;
 $spacing: 20px;
+
+/* github colors */
+.smallerIcon { font-size: 0.75em !important; }
+.githubColor-HTML { color: #E34C26; }
+.githubColor-Java { color: #B07219; }
+.githubColor-JavaScript { color: #F1E05A; }
+.githubColor-CSS { color: #563D7C; }
+.githubColor-VBNet { color: #945DB7; }
+.githubColor-ASPNet { color: #9400FF; }
+.githubColor-SCSS { color: #C6538C; }
+.githubColor-Star { color: #FFD700; }
 
 .github-cards {
   display: flex;

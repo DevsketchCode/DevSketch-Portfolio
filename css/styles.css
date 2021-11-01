@@ -43,7 +43,8 @@
 body, a {
   background-color: #091d3a;
   color: #d1dceb;
-  font-family: "Chakra Petch";
+  /* font-family: $secondaryFontFamily; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-decoration: none;
 }
 
@@ -151,6 +152,7 @@ main > hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 10px;
 }
 
 #workExperience {
@@ -358,7 +360,7 @@ ul {
 }
 
 .icons {
-  font-size: 5em;
+  font-size: 4em;
   list-style-type: none;
   display: inline-block;
   padding: 5px;
@@ -394,5 +396,82 @@ footer {
   margin: 30px 0px;
   padding: 20px;
   text-align: center;
+}
+
+/* Github cards */
+/* github colors */
+.smallerIcon {
+  font-size: 0.75em !important;
+}
+
+.githubColor-HTML {
+  color: #E34C26;
+}
+
+.githubColor-Java {
+  color: #B07219;
+}
+
+.githubColor-JavaScript {
+  color: #F1E05A;
+}
+
+.githubColor-CSS {
+  color: #563D7C;
+}
+
+.githubColor-VBNet {
+  color: #945DB7;
+}
+
+.githubColor-SCSS {
+  color: #C6538C;
+}
+
+.githubColor-Star {
+  color: #FFD700;
+}
+
+.github-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 900px;
+}
+
+.github-card {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 20px;
+  color: #555;
+  text-decoration: none;
+  font-size: 13px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 250px;
+}
+
+.github-card > h3 {
+  margin-top: 0;
+  color: #4078c0;
+  font-size: 15px;
+}
+
+.github-card__meta {
+  margin-right: 20px;
+}
+
+.github-card__meta > i {
+  font-size: 16px;
 }
 /*# sourceMappingURL=styles.css.map */
