@@ -404,6 +404,14 @@ footer {
   font-size: 0.75em !important;
 }
 
+.mediumIcon {
+  font-size: 0.9em !important;
+}
+
+.githubColor {
+  color: #000;
+}
+
 .githubColor-HTML {
   color: #E34C26;
 }
@@ -420,8 +428,20 @@ footer {
   color: #563D7C;
 }
 
-.githubColor-VBNet {
+.githubColor-VisualBasicNET {
   color: #945DB7;
+}
+
+.githubColor-ASPNET {
+  color: #9400FF;
+}
+
+.githubColor-CSharp {
+  color: #178600;
+}
+
+.githubColor-TypeScript {
+  color: #2B7489;
 }
 
 .githubColor-SCSS {
@@ -447,23 +467,26 @@ footer {
 
 .github-card {
   display: block;
+  background-color: #bac8f7;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: 1px solid #020c1b;
+  border-radius: 5px 30px;
+  -webkit-box-shadow: 4px 4px 8px #000;
+          box-shadow: 4px 4px 8px #000;
   margin: 10px;
-  padding: 20px;
-  color: #555;
+  padding: 30px;
+  color: #003e77;
   text-decoration: none;
   font-size: 13px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  min-width: 250px;
+  max-width: 500px;
 }
 
 .github-card > h3 {
   margin-top: 0;
-  color: #4078c0;
   font-size: 15px;
 }
 
@@ -473,5 +496,9 @@ footer {
 
 .github-card__meta > i {
   font-size: 16px;
+}
+
+.github-card__meta .github-languages {
+  padding-right: 10px;
 }
 /*# sourceMappingURL=styles.css.map */

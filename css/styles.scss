@@ -365,19 +365,17 @@ footer {
 
 
 /* Github cards */
-$color-github: #4078c0;
-$gray: #ccc;
-$text: #555;
-$spacing: 20px;
-
 /* github colors */
 .smallerIcon { font-size: 0.75em !important; }
+.mediumIcon { font-size: 0.9em !important; }
+
+.githubColor { color: #000; }
 .githubColor-HTML { color: #E34C26; }
 .githubColor-Java { color: #B07219; }
 .githubColor-JavaScript { color: #F1E05A; }
 .githubColor-CSS { color: #563D7C; }
-.githubColor-VBNet { color: #945DB7; }
-.githubColor-ASPNet { color: #9400FF; }
+.githubColor-VisualBasicNET { color: #945DB7; }
+.githubColor-ASPNET { color: #9400FF; }
 .githubColor-CSharp { color: #178600; }
 .githubColor-TypeScript { color: #2B7489; }
 
@@ -393,27 +391,33 @@ $spacing: 20px;
 
 .github-card {
   display: block;
+  background-color: $secondaryColor-lightest;
   box-sizing: border-box;
-  border: 1px solid $gray;
-  margin: $spacing/2;
-  padding: $spacing;
-  color: $text;
+  border: 1px solid $primaryColor-dark;
+  border-radius: 5px 30px;
+  box-shadow: 4px 4px 8px #000;
+  margin: 10px;
+  padding: 30px;
+  color: $darkText;
   text-decoration: none;
   font-size: 13px;
   flex: 1;
-  min-width: 250px;
+  max-width: 500px;
   
   > h3 {
     margin-top: 0;
-    color: $color-github;
     font-size: 15px;
   }
 }
 
 .github-card__meta {
-  margin-right: $spacing;
-  
+  margin-right: 20px;
   > i {
     font-size: 16px;
+  }
+
+  .github-languages { 
+
+    padding-right: 10px;
   }
 }
