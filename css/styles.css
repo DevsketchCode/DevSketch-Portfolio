@@ -73,6 +73,15 @@ header {
   width: 70%;
 }
 
+section {
+  margin: 0 auto;
+}
+
+header > section {
+  margin: 0;
+  width: 70%;
+}
+
 #heading h1 {
   margin: 0px 0px 30px 4px;
   font-weight: 600;
@@ -95,10 +104,6 @@ header {
   font-size: clamp(1rem, 5vw, 2rem);
 }
 
-#introduction {
-  width: 50%;
-}
-
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,7 +122,7 @@ main {
   padding: 0px;
   position: relative;
   margin: 0 auto;
-  width: 70%;
+  width: 75%;
 }
 
 main > h2 {
@@ -127,21 +132,11 @@ main > h2 {
 }
 
 main > h2 > hr {
-  margin: auto 30px;
-  padding: auto 0;
-  vertical-align: middle;
-  display: inline-block;
-  width: 60%;
-}
-
-main > hr {
-  border-style: none;
-  border-top-style: dotted;
-  border-color: #fca311;
-  border-width: 10px;
-  width: 200px;
-  margin-top: 50px;
-  margin-bottom: 0px;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #education section, #skills section, .gitHubCard {
@@ -155,6 +150,10 @@ main > hr {
   padding: 10px;
 }
 
+#skills {
+  margin-bottom: 5em;
+}
+
 #workExperience {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,7 +162,6 @@ main > hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
 }
 
 ul {
@@ -197,7 +195,7 @@ ul {
   border: 1px solid #020c1b;
   width: 670px;
   height: 450px;
-  margin-bottom: 10em;
+  margin-bottom: 5em;
   overflow: auto;
 }
 
@@ -398,6 +396,22 @@ footer {
   text-align: center;
 }
 
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
 /* Github cards */
 /* github colors */
 .smallerIcon {
@@ -453,19 +467,15 @@ footer {
 }
 
 .github-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 900px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
 }
 
 .github-card {
+  position: relative;
   display: block;
   background-color: #bac8f7;
   -webkit-box-sizing: border-box;
@@ -479,10 +489,7 @@ footer {
   color: #003e77;
   text-decoration: none;
   font-size: 13px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  max-width: 500px;
+  min-height: 200px;
 }
 
 .github-card > h3 {
@@ -490,15 +497,46 @@ footer {
   font-size: 15px;
 }
 
+.github-card:hover {
+  -webkit-box-shadow: 4px 4px 8px #fca311;
+          box-shadow: 4px 4px 8px #fca311;
+}
+
 .github-card__meta {
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .github-card__meta > i {
   font-size: 16px;
 }
 
-.github-card__meta .github-languages {
-  padding-right: 10px;
+.github-card-bottom-info {
+  position: absolute;
+  bottom: 10px;
+}
+
+.github-repo-image {
+  width: 60vw;
+}
+
+.github-languages {
+  padding-right: 5px;
+  padding-left: 0px;
+}
+
+.github-repo-description {
+  font-size: 1.2em;
+}
+
+.gitImageContainer {
+  display: none;
+  text-align: center;
+}
+
+.gitHubImageloadingIcon {
+  display: none;
+  float: right;
+  position: relative;
+  top: 0px;
 }
 /*# sourceMappingURL=styles.css.map */

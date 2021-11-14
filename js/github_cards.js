@@ -2,24 +2,67 @@
   $(document).ready(function() {
     gitUser = "DevsketchCode";
 
+
+    // TODO: NEED TO FIX or change the hover to a click. Hover on the 2nd or 3rd block, moves the div lower, which disables the hover. 
+    // TODO: May want to just do OnMouseOver, then click to close.  This would also mean to create a clickable link to go to the github repository.
+
     // The repos must be public in order for the information to be provided from github
-    createGithubCard(gitUser, "l8_PawperingVetClinicCRM", "<i class='fa fa-paw' aria-hidden='true'></i> Pawpering Vet Clinic CRM" );
-    createGithubCard(gitUser, "DevSketch-Portfolio", "My Portfolio" );
-    createGithubCard(gitUser, "ASPNET_ReStore_WebStore", "ReStore" );
-    createGithubCard(gitUser, "ASPNET_ForceFitness", "ForceFitness" );
+    createGithubCard(gitUser, "l8_PawperingVetClinicCRM", "<i class='fa fa-paw' aria-hidden='true'></i> Pawpering Vet Clinic CRM", "pawpering_screenshot_lg.png" );
+    createGithubCard(gitUser, "DevSketch-Portfolio", "My Portfolio", "" );
+    createGithubCard(gitUser, "ASPNET_ReStore_WebStore", "ReStore", "" );
+    createGithubCard(gitUser, "ASPNET_ForceFitness", "ForceFitness", "" );
+    createGithubCard(gitUser, "XperienceThePhilippines", "Xperience The Philippines", "XperienceThePhilippines.jpg" );
+    createGithubCard(gitUser, "RollerBallLab", "Roller Ball Escape!", "Screenshot_Level3.jpg" );
+    createGithubCard(gitUser, "JavaWeb_FinalProject_MVCWebApplication_Movies", "Java Movie Application", "JavaMovieApplication.jpg" );
+
     
+    var hoverWaitToLoad;
+    $('.github-cards').hover(function() {
+
+      if($(this).find('.gitImageContainer').children('img').attr('src').length > 0) {
+        var gitCard = $(this);
+        var seconds = 2; // You just need to change the number of seconds to hover here
+        var counter = seconds;
+        gitCard.find('.gitCardHoverCountdown').html(counter);
+        var interval = setInterval(function() {
+          counter--;
+          gitCard.find('.gitCardHoverCountdown').html(counter);
+          if(counter == 0) {
+            clearInterval(interval);
+          }
+        },1000);
+        
+        gitCard.find('.gitHubImageloadingIcon').show();
+        hoverWaitToLoad = setTimeout(function() {
+          gitCard.find('.gitImageContainer').fadeIn();
+          gitCard.find('.gitHubImageloadingIcon').hide();
+        }, (seconds * 1000));
+      }
+    }, function() {
+      clearTimeout(hoverWaitToLoad);
+      $(this).find('.gitImageContainer').fadeOut();
+      $(this).find('.gitHubImageloadingIcon').hide();
+    });
+    
+
     loadGithubCardData();
   });
 })();
 
-function createGithubCard(gitUser, repo, projectName) {
+function createGithubCard(gitUser, repo, projectName, repoImage) {
   projectDiv = $('#projects');
   url = "https://github.com/" + gitUser + "/" + repo;
   repo = gitUser + "/" + repo;
 
+  if (repoImage != "") {
+    repoImage = 'images/' + repoImage;
+  }
+
   githubCard = projectDiv.append('\
-  <div class="github-cards">\
+  <div class="github-cards" >\
   <a href="' + url + '" class="github-card" data-github="' + repo + '" target="_blank">\
+  <div class="gitHubImageloadingIcon"><span class="gitCardHoverCountdown"></span>\
+  <i class="fa fa-spinner fa-pulse"></i> hold hover to view more</div>\
     <h3>' + projectName + '</h3>\
     <p class="github-repo">\
       <span class="github-card__meta">\
@@ -29,54 +72,54 @@ function createGithubCard(gitUser, repo, projectName) {
       </span>\
     </p>\
     <p>\
-      <span class="github-card__meta">\
+      <span class="github-card__meta github-repo-description">\
         Description: \
         <span data-description></span>\
       </span>\
-    </p>\
-    <span class="github-card__meta">\
-      <i class="fa fa-link mediumIcon" aria-hidden="true"></i>\
-      <span data-html_url></span>\
-    </span><br> \
-    <span class="github-card__meta"  title="stars">\
-      <i class="fa fa-star" aria-hidden="true"></i>\
-      <span data-stars></span>\
-    </span>\
-    <span class="github-card__meta" title="watchers">\
-      <i class="fa fa-eye" aria-hidden="true"></i>\
-      <span data-watchers></span>\
-    </span>\
-    <span class="github-card__meta" title="# of subscribers">\
-      <i class="fa fa-user-plus" aria-hidden="true"></i>\
-      <span data-subscribers_count></span>\
-    </span>  \
-    <span class="github-card__meta" title="forks">\
-      <i class="fa fa-code-fork" aria-hidden="true"></i>\
-      <span data-forks></span>\
-    </span>\
-    <span class="github-card__meta" title="# of forks">\
-      # of forks: \
-      <i class="fa fa-code-fork" aria-hidden="true"></i>\
-      <span data-forks_count></span>\
-    </span>\
-    <span class="github-card__meta" style="display: none">\
-      open issues: \
-      <i class="fa fa-code-fork" aria-hidden="true"></i>\
-      <span data-open_issues></span>\
-    </span>   \
-    <span class="github-card__meta" title="# of networks">\
-      <i class="fa fa-sitemap mediumIcon" aria-hidden="true"></i>\
-      <span data-network_count></span>\
-    </span>  \
-    <span class="github-card__meta" title="size">\
-      <i class="fa fa-database mediumIcon" aria-hidden="true"></i>\
-      <span data-size></span>\
-    </span>  \
-    <span class="github-card__meta" title="languages used">\
-      <span data-list-of-language> \
-      ' + // list of languages is populated here from the loadGithubCardData function 
-      '</span> \
-    </span>  \
+      <p class="github-card__meta gitImageContainer"><img class="github-repo-image" src="' + repoImage + '"></p>\
+      \
+      \
+    <div class="github-card-bottom-info"> \
+      <span class="github-card__meta" title="languages used">\
+        <span data-list-of-language> \
+        ' + // list of languages is populated here from the loadGithubCardData function 
+        '</span> \
+      </span>  \
+      <span class="github-card__meta"  title="stars">\
+        <i class="fa fa-star" aria-hidden="true"></i>\
+        <span data-stars></span>\
+      </span>\
+      <span class="github-card__meta" title="watchers">\
+        <i class="fa fa-eye" aria-hidden="true"></i>\
+        <span data-watchers></span>\
+      </span>\
+      <span class="github-card__meta" title="# of subscribers">\
+        <i class="fa fa-user-plus" aria-hidden="true"></i>\
+        <span data-subscribers_count></span>\
+      </span>  \
+      <span class="github-card__meta" title="forks">\
+        <i class="fa fa-code-fork" aria-hidden="true"></i>\
+        <span data-forks></span>\
+      </span>\
+      <span class="github-card__meta" title="# of forks">\
+        # of forks: \
+        <i class="fa fa-code-fork" aria-hidden="true"></i>\
+        <span data-forks_count></span>\
+      </span>\
+      <span class="github-card__meta" style="display: none">\
+        open issues: \
+        <i class="fa fa-code-fork" aria-hidden="true"></i>\
+        <span data-open_issues></span>\
+      </span>   \
+      <span class="github-card__meta" title="# of networks">\
+        <i class="fa fa-sitemap mediumIcon" aria-hidden="true"></i>\
+        <span data-network_count></span>\
+      </span>  \
+      <span class="github-card__meta" title="size">\
+        <i class="fa fa-database mediumIcon" aria-hidden="true"></i>\
+        <span data-size></span>\
+      </span>  \
+    </div> \
   </a> \
   </div> \
 ');
@@ -95,8 +138,8 @@ function loadGithubCardData() {
       }).then(function (response) {
         // Retrieve repo details;
         $(_this).find('[data-name]').text(response.name);
-        $(_this).find('[data-fullname]').text(response.full_name);
-        $(_this).find('[data-html_url]').text(response.html_url);
+        //$(_this).find('[data-full_name]').text(response.full_name);
+        //$(_this).find('[data-html_url]').text(response.html_url);
         $(_this).find('[data-description]').text(response.description);
 
         // only show if they have a value

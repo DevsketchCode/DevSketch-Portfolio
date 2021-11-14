@@ -98,6 +98,15 @@ header {
   width: 70%;
 }
 
+section {
+  margin: 0 auto;
+}
+
+header>section {
+  margin: 0;
+  width: 70%;
+}
+
 // Name
 #heading h1 {
   margin: 0px 0px 30px 4px;
@@ -123,10 +132,6 @@ header {
   font-size: clamp(1rem, 5vw, 2rem);
 }
 
-#introduction {
-  width: 50%;
-}
-
 
 main {
   display: flex;
@@ -137,7 +142,7 @@ main {
   padding: 0px;
   position: relative;
   margin: 0 auto;
-  width: 70%;
+  width: 75%;
 }
 
 main > h2 {
@@ -147,21 +152,9 @@ main > h2 {
 }
 
 main > h2 > hr {
-  margin: auto 30px;
-  padding: auto 0;
-  vertical-align: middle;
-  display: inline-block;
-  width: 60%;
-}
-
-main > hr {
-  border-style: none;
-  border-top-style: dotted;
-  border-color: $accentColor;
-  border-width: 10px;
-  width: 200px;
-  margin-top: 50px;
-  margin-bottom: 0px;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 #education section, #skills section, .gitHubCard {
@@ -171,10 +164,13 @@ main > hr {
   padding: 10px;
 }
 
+#skills {
+  margin-bottom: 5em;
+}
+
 #workExperience {
   display: flex;
   flex-direction: row;
-  width: 100%;
 }
 
 ul {
@@ -208,7 +204,7 @@ ul {
   border: 1px solid $primaryColor-dark;
   width: 670px;
   height: 450px;
-  margin-bottom: 10em;
+  margin-bottom: 5em;
   overflow: auto;
 }
 
@@ -363,6 +359,13 @@ footer {
   text-align: center;
 }
 
+#projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
 
 /* Github cards */
 /* github colors */
@@ -382,14 +385,14 @@ footer {
 .githubColor-SCSS { color: #C6538C; }
 .githubColor-Star { color: #FFD700; }
 
+
 .github-cards {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  width: 900px;
+  flex: 1;
+  flex-basis: 33%;
 }
 
 .github-card {
+  position: relative;
   display: block;
   background-color: $secondaryColor-lightest;
   box-sizing: border-box;
@@ -401,23 +404,51 @@ footer {
   color: $darkText;
   text-decoration: none;
   font-size: 13px;
-  flex: 1;
-  max-width: 500px;
-  
+  min-height: 200px;
+
   > h3 {
     margin-top: 0;
     font-size: 15px;
   }
 }
 
+.github-card:hover{
+  box-shadow: 4px 4px 8px $accentColor;
+}
+
 .github-card__meta {
-  margin-right: 20px;
+  margin-right: 5px;
   > i {
     font-size: 16px;
   }
+}
 
-  .github-languages { 
+.github-card-bottom-info {
+  position: absolute;
+  bottom: 10px;
+}
 
-    padding-right: 10px;
-  }
+.github-repo-image {
+  width: 60vw;
+}
+
+.github-languages { 
+  padding-right: 5px;
+  padding-left: 0px;
+}
+
+.github-repo-description {
+  font-size: 1.2em;
+}
+
+.gitImageContainer {
+  display: none;
+  text-align: center;
+}
+
+.gitHubImageloadingIcon {
+  display: none;
+  float: right;
+  position: relative;
+  top: 0px;
 }
