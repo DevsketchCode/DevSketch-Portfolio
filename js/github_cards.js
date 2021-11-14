@@ -15,35 +15,36 @@
     createGithubCard(gitUser, "RollerBallLab", "Roller Ball Escape!", "Screenshot_Level3.jpg" );
     createGithubCard(gitUser, "JavaWeb_FinalProject_MVCWebApplication_Movies", "Java Movie Application", "JavaMovieApplication.jpg" );
 
-    
-    var hoverWaitToLoad;
-    $('.github-cards').hover(function() {
+    // Collapse all git image containers
+    $('.gitImageContainer').hide();
 
-      if($(this).find('.gitImageContainer').children('img').attr('src').length > 0) {
-        var gitCard = $(this);
-        var seconds = 2; // You just need to change the number of seconds to hover here
-        var counter = seconds;
-        gitCard.find('.gitCardHoverCountdown').html(counter);
-        var interval = setInterval(function() {
-          counter--;
-          gitCard.find('.gitCardHoverCountdown').html(counter);
-          if(counter == 0) {
-            clearInterval(interval);
-          }
-        },1000);
+    $('.gitHubImageAvail').click(function() {
+
+      selectedGitCard = $(this).parent().find('.gitImageContainer');
+
+      if (selectedGitCard.is(':hidden')) {
+        // Collapse all git image containers
+        $('.gitImageContainer').slideUp();
+
+        // Expand selected card
+        selectedGitCard.slideDown();
         
-        gitCard.find('.gitHubImageloadingIcon').show();
-        hoverWaitToLoad = setTimeout(function() {
-          gitCard.find('.gitImageContainer').fadeIn();
-          gitCard.find('.gitHubImageloadingIcon').hide();
-        }, (seconds * 1000));
+        // Adjust the link text
+        $(this).find('.gitHubViewImageLink').html('Close Screenshot')
+
+      } else {
+
+        // Collapse all git image containers
+        selectedGitCard.slideUp();
+        
+        // Adjust the link text
+        $(this).find('.gitHubViewImageLink').html('View Screenshot')
       }
-    }, function() {
-      clearTimeout(hoverWaitToLoad);
-      $(this).find('.gitImageContainer').fadeOut();
-      $(this).find('.gitHubImageloadingIcon').hide();
+
+      // Scroll to the selected card. 
+      $('html, body').animate({ scrollTop: selectedGitCard.parent().offset().top }, 800);
+
     });
-    
 
     loadGithubCardData();
   });
@@ -55,31 +56,36 @@ function createGithubCard(gitUser, repo, projectName, repoImage) {
   repo = gitUser + "/" + repo;
 
   if (repoImage != "") {
+    viewImageDiv = '<div class="gitHubImageAvail"><a class="gitHubViewImageLink" href="#">View Screenshot</a></div>';
     repoImage = 'images/' + repoImage;
+    repoImageContainer = '<p class="github-card__meta gitImageContainer"><img class="github-repo-image" src="' + repoImage + '"></p>';
+  } else {
+    viewImageDiv = "";
+    repoImageContainer = "";
   }
 
   githubCard = projectDiv.append('\
-  <div class="github-cards" >\
-  <a href="' + url + '" class="github-card" data-github="' + repo + '" target="_blank">\
-  <div class="gitHubImageloadingIcon"><span class="gitCardHoverCountdown"></span>\
-  <i class="fa fa-spinner fa-pulse"></i> hold hover to view more</div>\
-    <h3>' + projectName + '</h3>\
+  <div class="github-cards">\
+  <div class="github-card" data-github="' + repo + '">\
+  <!--<a href="' + url + '" class="github-card" data-github="' + repo + '" target="_blank">-->\
+  ' + viewImageDiv + 
+    '<h3>' + projectName + '</h3>\
     <p class="github-repo">\
       <span class="github-card__meta">\
-        <i class="fa fa-github githubColor" aria-hidden="true"></i>\
-        Repository: \
-        <span data-name></span>\
+        <a href="' + url + '" alt="' + url + '" title="' + url + '" target="_blank">\
+          <i class="fa fa-github githubColor" aria-hidden="true"></i>\
+          Repository: \
+          <span data-name></span>\
+        </a>\
       </span>\
     </p>\
     <p>\
       <span class="github-card__meta github-repo-description">\
         Description: \
         <span data-description></span>\
-      </span>\
-      <p class="github-card__meta gitImageContainer"><img class="github-repo-image" src="' + repoImage + '"></p>\
-      \
-      \
-    <div class="github-card-bottom-info"> \
+      </span>' + 
+      repoImageContainer + 
+    '<div class="github-card-bottom-info"> \
       <span class="github-card__meta" title="languages used">\
         <span data-list-of-language> \
         ' + // list of languages is populated here from the loadGithubCardData function 
@@ -120,7 +126,8 @@ function createGithubCard(gitUser, repo, projectName, repoImage) {
         <span data-size></span>\
       </span>  \
     </div> \
-  </a> \
+  <!--</a>--> \
+  </div>\
   </div> \
 ');
 };
@@ -139,7 +146,7 @@ function loadGithubCardData() {
         // Retrieve repo details;
         $(_this).find('[data-name]').text(response.name);
         //$(_this).find('[data-full_name]').text(response.full_name);
-        //$(_this).find('[data-html_url]').text(response.html_url);
+        $(_this).find('[data-html_url]').text(response.html_url);
         $(_this).find('[data-description]').text(response.description);
 
         // only show if they have a value

@@ -365,6 +365,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 /* Github cards */
@@ -429,7 +430,7 @@ footer {
 }
 
 .github-repo-image {
-  width: 60vw;
+  width: 50vw;
 }
 
 .github-languages { 
@@ -446,9 +447,27 @@ footer {
   text-align: center;
 }
 
-.gitHubImageloadingIcon {
-  display: none;
+.gitHubImageAvail {
   float: right;
   position: relative;
   top: 0px;
+}
+
+.gitHubImageAvail a {
+  background-color: inherit;
+  color: inherit;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.gitHubImageAvail a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.github-repo a {
+  background-color: inherit;
+  color: inherit;
+  font-size: 12px;
+  font-weight: bold;
 }
