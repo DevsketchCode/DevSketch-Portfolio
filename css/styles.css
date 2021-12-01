@@ -35,7 +35,6 @@
   font-family: "Chakra Petch";
   padding: 15px;
   margin: 5px;
-  text-shadow: 2px 2px 4px #020c1b;
   -webkit-box-shadow: 4px 4px 8px #020c1b;
           box-shadow: 4px 4px 8px #020c1b;
 }
@@ -193,6 +192,7 @@ ul {
   position: relative;
   background-color: #bac8f7;
   border: 1px solid #020c1b;
+  border-radius: 5px 30px;
   width: 670px;
   height: 450px;
   margin-bottom: 5em;
@@ -213,12 +213,12 @@ ul {
 /* Handle */
 #workExperienceContentContainer::-webkit-scrollbar-thumb {
   border: 1px solid #091d3a;
-  background: #253c64;
+  background-color: #253c64;
 }
 
 /* Handle on hover */
 #workExperienceContentContainer::-webkit-scrollbar-thumb:hover {
-  background: #3b4966;
+  background-color: #3b4966;
 }
 
 #j2_details, #j3_details, #j4_details, #j5_details {
@@ -231,6 +231,24 @@ ul {
   top: 0;
   padding: 0 20px 0 20px;
   color: #003e77;
+}
+
+#eduction {
+  width: 50%;
+}
+
+#education > section {
+  background-color: #bac8f7;
+  border-radius: 5px 30px;
+  color: #003e77;
+}
+
+#education p {
+  margin: 5px;
+}
+
+#cvtcLogo {
+  width: 200px;
 }
 
 #profileImg {

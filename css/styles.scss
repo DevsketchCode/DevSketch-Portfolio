@@ -70,7 +70,6 @@ $darkText: #003e77;
   font-family: $secondaryFontFamily;
   padding: 15px;
   margin: 5px;
-  text-shadow: 2px 2px 4px $primaryColor-dark;
   box-shadow: 4px 4px 8px $primaryColor-dark;
 }
 
@@ -202,6 +201,7 @@ ul {
   position: relative;
   background-color: $secondaryColor-lightest;
   border: 1px solid $primaryColor-dark;
+  border-radius: 5px 30px;
   width: 670px;
   height: 450px;
   margin-bottom: 5em;
@@ -221,12 +221,12 @@ ul {
 /* Handle */
 #workExperienceContentContainer::-webkit-scrollbar-thumb {
   border: 1px solid $primaryColor;
-  background: $primaryColor-lightest;
+  background-color: $primaryColor-lightest;
 }
 
 /* Handle on hover */
 #workExperienceContentContainer::-webkit-scrollbar-thumb:hover {
-    background: $secondaryColor-dark;
+    background-color: $secondaryColor-dark;
 }
 
 
@@ -240,6 +240,24 @@ ul {
   top: 0;
   padding: 0 20px 0 20px; 
   color:$darkText;
+}
+
+#eduction {
+  width: 50%;
+}
+
+#education > section {
+  background-color: $secondaryColor-lightest;
+  border-radius: 5px 30px;
+  color: $darkText;
+}
+
+#education p {
+  margin: 5px;
+}
+
+#cvtcLogo { 
+  width: 200px; 
 }
 
 #profileImg {
