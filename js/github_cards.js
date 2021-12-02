@@ -42,7 +42,7 @@
       }
 
       // Scroll to the selected card. 
-      $('html, body').animate({ scrollTop: selectedGitCard.parent().offset().top }, 800);
+      $('html, body').animate({ scrollTop: selectedGitCard.parent().parent().offset().top }, 800);
 
     });
 

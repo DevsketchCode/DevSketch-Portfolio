@@ -156,6 +156,14 @@ main > h2 > hr {
   display: flex;
 }
 
+.showme{
+  opacity: 0;
+}
+
+.hideme {
+  opacity: 0;
+}
+
 #education section, #skills section, .gitHubCard {
   @extend %boxContainer;
   display: flex;
@@ -165,6 +173,7 @@ main > h2 > hr {
 
 #skills {
   margin-bottom: 5em;
+  text-align: center;
 }
 
 #workExperience {
@@ -201,7 +210,7 @@ ul {
   position: relative;
   background-color: $secondaryColor-lightest;
   border: 1px solid $primaryColor-dark;
-  border-radius: 5px 30px;
+  border-radius: 5px 30px 30px 5px;
   width: 670px;
   height: 450px;
   margin-bottom: 5em;
@@ -242,14 +251,12 @@ ul {
   color:$darkText;
 }
 
-#eduction {
-  width: 50%;
-}
 
 #education > section {
   background-color: $secondaryColor-lightest;
-  border-radius: 5px 30px;
+  border-radius: 20px; 
   color: $darkText;
+  padding: 25px;
 }
 
 #education p {

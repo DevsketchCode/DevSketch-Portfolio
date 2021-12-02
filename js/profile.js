@@ -1,8 +1,6 @@
 $(function() {
 
   // Fresh start, fade out all the fields necessary
-  $('#workExperience').fadeOut();
-
 
   // Start subheading Animation
   subheadingAnimation();
@@ -31,12 +29,19 @@ $(function() {
 
   });
 
-}).scroll(function() {
+ }).scroll(function() {
   var y = $(this).scrollTop();
-  if (y > 250) {
-    $('#workExperience').fadeIn(1000);
-  } else {
-    $('#workExperience').fadeOut();
+  
+  if (y > 550) {
+    //$('#workExperience').fadeIn(1000);
+    $('.showme').css({ 
+      opacity: 0,
+      position: 'relative',
+      left: -1000
+    }).animate({
+      opacity: 1,
+      left: 0
+    }, 800, 'easeOutExpo');       
   }
 });
 
