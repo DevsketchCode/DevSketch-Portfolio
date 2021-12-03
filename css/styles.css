@@ -142,10 +142,6 @@ main > h2 > hr {
   opacity: 0;
 }
 
-.hideme {
-  opacity: 0;
-}
-
 #education section, #skills section, .gitHubCard {
   display: -webkit-box;
   display: -ms-flexbox;

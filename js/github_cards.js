@@ -3,9 +3,6 @@
     gitUser = "DevsketchCode";
 
 
-    // TODO: NEED TO FIX or change the hover to a click. Hover on the 2nd or 3rd block, moves the div lower, which disables the hover. 
-    // TODO: May want to just do OnMouseOver, then click to close.  This would also mean to create a clickable link to go to the github repository.
-
     // The repos must be public in order for the information to be provided from github
     createGithubCard(gitUser, "l8_PawperingVetClinicCRM", "<i class='fa fa-paw' aria-hidden='true'></i> Pawpering Vet Clinic CRM", "pawpering_screenshot_lg.png" );
     createGithubCard(gitUser, "DevSketch-Portfolio", "My Portfolio", "" );
@@ -20,7 +17,7 @@
 
     $('.gitHubImageAvail').click(function() {
 
-      selectedGitCard = $(this).parent().find('.gitImageContainer');
+      var selectedGitCard = $(this).parent().find('.gitImageContainer');
 
       if (selectedGitCard.is(':hidden')) {
         // Collapse all git image containers
@@ -29,8 +26,11 @@
         // Expand selected card
         selectedGitCard.slideDown();
         
+        // Reset link text on all containers
+        $('.gitHubViewImageLink').html('View Screenshot');
+
         // Adjust the link text
-        $(this).find('.gitHubViewImageLink').html('Close Screenshot')
+        $(this).find('.gitHubViewImageLink').html('Close Screenshot');
 
       } else {
 
@@ -38,12 +38,11 @@
         selectedGitCard.slideUp();
         
         // Adjust the link text
-        $(this).find('.gitHubViewImageLink').html('View Screenshot')
+        $(this).find('.gitHubViewImageLink').html('View Screenshot');
       }
 
       // Scroll to the selected card. 
-      $('html, body').animate({ scrollTop: selectedGitCard.parent().parent().offset().top }, 800);
-
+      $('html, body').stop().animate({ scrollTop: selectedGitCard.parent().offset().top }, 800);
     });
 
     loadGithubCardData();
@@ -65,8 +64,8 @@ function createGithubCard(gitUser, repo, projectName, repoImage) {
   }
 
   githubCard = projectDiv.append('\
-  <div class="github-cards">\
-  <div class="github-card" data-github="' + repo + '">\
+  <div name="githubcards" class="github-cards">\
+  <div name="githubcard" class="github-card" data-github="' + repo + '">\
   <!--<a href="' + url + '" class="github-card" data-github="' + repo + '" target="_blank">-->\
   ' + viewImageDiv + 
     '<h3>' + projectName + '</h3>\

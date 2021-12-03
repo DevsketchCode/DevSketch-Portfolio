@@ -160,10 +160,6 @@ main > h2 > hr {
   opacity: 0;
 }
 
-.hideme {
-  opacity: 0;
-}
-
 #education section, #skills section, .gitHubCard {
   @extend %boxContainer;
   display: flex;
