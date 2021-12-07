@@ -78,7 +78,7 @@ section {
 
 header > section {
   margin: 0;
-  width: 70%;
+  width: 68%;
 }
 
 #heading h1 {
@@ -158,6 +158,10 @@ main > h2 > hr {
   text-align: center;
 }
 
+#skills section {
+  background-color: #162a50;
+}
+
 #workExperience {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,15 +177,15 @@ ul {
   padding: 0 10px 10px 10px;
 }
 
-#workExperience > ul > li {
+#workExperience > ul li {
   list-style-type: none;
   border-left: 2px solid #915d0a;
   font-size: 1em;
   padding: 10px;
 }
 
-#workExperience > ul > li:hover {
-  background-color: #12274b;
+#workExperience > ul li:hover {
+  background-color: #416094;
   border-left: 2px solid #fca311;
   cursor: pointer;
   font-weight: bold;
@@ -218,7 +222,7 @@ ul {
 /* Handle */
 #workExperienceContentContainer::-webkit-scrollbar-thumb {
   border: 1px solid #091d3a;
-  background-color: #253c64;
+  background-color: #416094;
 }
 
 /* Handle on hover */
@@ -577,5 +581,84 @@ footer {
   color: inherit;
   font-size: 12px;
   font-weight: bold;
+}
+
+/* ---- DESKTOP ADJUST FOOTER ---- */
+@media only screen and (max-width: 1850px) {
+  #profileImg {
+    right: 0%;
+  }
+}
+
+/* ---- TABLETS ---- */
+@media only screen and (max-width: 1150px) {
+  header {
+    width: 90%;
+  }
+  header > section {
+    width: 50%;
+  }
+  #subheading {
+    white-space: nowrap;
+  }
+  main {
+    width: 90%;
+  }
+  #introduction {
+    width: 80%;
+  }
+}
+
+/* ---- MOBILE PHONES ---- */
+@media only screen and (max-width: 930px) {
+  header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #heading {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+  #heading h3, #heading h2 {
+    margin: 10px;
+  }
+  #subheading {
+    white-space: break-spaces;
+  }
+  #profileImg {
+    clip-path: inset(0% 0% 5% round 10px);
+    -webkit-clip-path: inset(0% 0% 5% round 10px);
+    position: static;
+    right: unset;
+    height: auto;
+    width: 50%;
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+  #introduction {
+    width: 100%;
+  }
+  #workExperience {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  #workExperienceContentContainer {
+    width: 100%;
+  }
+  .showme {
+    opacity: 1;
+  }
+  .github-cards {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .github-repo-image {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

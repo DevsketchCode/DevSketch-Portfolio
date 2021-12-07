@@ -46,7 +46,7 @@ $secondaryFontFamily: $a6;
 $primaryColor-dark: #020c1b;
 $primaryColor: #091d3a;
 $primaryColor-light: #12274b;
-$primaryColor-lightest: #253c64;
+$primaryColor-lightest: #416094;
 
 $secondaryColor-dark: #3b4966;
 $secondaryColor: #7987b1;
@@ -60,6 +60,7 @@ $borderColor: #e5e5e5;
 
 $lightText: #d1dceb;
 $darkText: #003e77;
+$skills: #162a50;
 
 %boxContainer {
   background-color: $primaryColor-light;
@@ -103,7 +104,7 @@ section {
 
 header>section {
   margin: 0;
-  width: 70%;
+  width: 68%;
 }
 
 // Name
@@ -172,6 +173,10 @@ main > h2 > hr {
   text-align: center;
 }
 
+#skills section {
+  background-color: $skills;
+}
+
 #workExperience {
   display: flex;
   flex-direction: row;
@@ -182,15 +187,15 @@ ul {
   padding: 0 10px 10px 10px;
 }
 
-#workExperience > ul > li {
+#workExperience > ul li {
   list-style-type: none;
   border-left: 2px solid $accentColor-dim;
   font-size: 1em;
   padding: 10px;
 }
 
-#workExperience > ul > li:hover {
-  background-color: $primaryColor-light;
+#workExperience > ul li:hover {
+  background-color: $primaryColor-lightest;
   border-left: 2px solid $accentColor;
   cursor: pointer;
   font-weight: bold;
@@ -491,4 +496,98 @@ footer {
   color: inherit;
   font-size: 12px;
   font-weight: bold;
+}
+
+
+/* ---- DESKTOP ADJUST FOOTER ---- */
+@media only screen and (max-width: 1850px) {
+  #profileImg{
+    right: 0%;
+  }
+}
+
+/* ---- TABLETS ---- */
+@media only screen and (max-width: 1150px) {
+  header {
+    width: 90%;
+  }
+
+  header>section {
+    width: 50%;
+  }
+
+  #subheading {
+    white-space: nowrap;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  #introduction {
+    width: 80%;
+  }
+}
+
+
+
+/* ---- MOBILE PHONES ---- */
+@media only screen and (max-width: 930px) {
+
+  header {
+    justify-content: flex-start;
+  }
+
+  #heading {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  #heading h3, #heading h2 {
+    margin: 10px;
+  }
+
+  #subheading {
+    white-space: break-spaces;
+  }
+
+  // variable for rounded clipped image
+  $rci: round 10px;
+
+  #profileImg{
+    clip-path: inset(0% 0% 5% $rci);
+    -webkit-clip-path: inset(0% 0% 5% $rci);
+    position: static;
+    right: unset;
+    height: auto;
+    width: 50%;
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  #introduction {
+    width: 100%;
+  }
+
+  #workExperience {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #workExperienceContentContainer {
+    width: 100%;
+  }
+
+  .showme {
+    opacity: 1;
+  }
+
+  .github-cards { 
+    flex-basis: 100%;
+  }
+  .github-repo-image {
+    width: 100%;
+  }
+
 }
