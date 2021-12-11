@@ -268,7 +268,7 @@ ul {
 }
 
 .profileImage {
-  content: url("../images/profile_image_sm.jpg");
+  content: url("../images/profile_sm.png");
 }
 
 .glitchEffect {
@@ -280,7 +280,7 @@ ul {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../images/profile_image_sm.jpg");
+  background: url("../images/profile_sm.png");
   background-size: cover;
 }
 
@@ -291,7 +291,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../images/profile_image_sm.jpg");
+  background: url("../images/profile_sm.png");
   background-size: cover;
   mix-blend-mode: hard-light;
 }
