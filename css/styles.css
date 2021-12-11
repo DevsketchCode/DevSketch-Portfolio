@@ -7,25 +7,9 @@
   You do not need to upload the scss or css.map files to the website.
   They are just used to create the final css product. 
 */
-@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-/* manly primary styled */
-/* nice primary styled */
-/* very nice both smooth */
-/* meh for primary & Secondary */
-/* okay both smooth */
-/* nice ridged boxy, nice primary, very nice and clean secondary */
-/* Pixel, meh */
-/* nice for primary, smooth boxy */
-/* nice secondary boxy */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap"); /* using this one */
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap"); /* using this one */
+
 #education section, #skills section, .gitHubCard {
   background-color: #12274b;
   border: 1px solid #091d3a;
@@ -270,7 +254,7 @@ ul {
 .profileImage {
   content: url("../images/profile_sm.png");
 }
-
+/*
 .glitchEffect {
   content: '';
   text-align: center;
@@ -300,7 +284,7 @@ ul {
   -webkit-animation: animate .4s;
           animation: animate .4s;
 }
-
+*/
 @-webkit-keyframes animate {
   0% {
     background-position: 0 0;

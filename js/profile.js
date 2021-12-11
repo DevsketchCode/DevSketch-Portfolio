@@ -53,8 +53,8 @@ const subheadingAnimation = async() => {
   $currentHeading.html('It\'s nice to meet you.');
 
   if($(window).width() > $phoneWidth) {
-    var headings = ["It's nice to meet you.", "I program in .Net", "I program in Java", "I program in C#, and more.", "I love code.", "I AM Code", "I love LAMP.", "I am a full stack developer."];
-    var rewindTo = [1, 13, 13, 2, 2, 2, 1];
+    var headings = ["It's nice to meet you.", "I program in .Net", "I program in Java", "I program in C#, and more.", "I love code.", "I love LAMP.", "I am a full stack developer."];
+    var rewindTo = [1, 13, 13, 2, 2, 1];
   } else {
     var headings = ["It's nice to meet you.", "I program in .Net", "I program in Java", "I program in C#, and more.", "I love code.", "I love LAMP.", "I am a full stack developer."];
     var rewindTo = [1, 13, 13, 2, 2, 1];
@@ -74,19 +74,23 @@ const subheadingAnimation = async() => {
       nextHeading = h+1;
       if (nextHeading < headings.length) {
         
+        /*
+        // Decided to not use the glitch effect at this time
         // If I Am Code is the heading, adjust the color before typing
         if (headings[nextHeading] == "I AM Code" && $(window).width() > $phoneWidth) {
           $('#subheading').css({"color":" #4af753"})
         } else {
           $('#subheading').css({"color":"#d1dceb"});
         }
+        */
 
         for(var t=rewindTo[h]; t <= headings[nextHeading].length; t++) {
           $currentHeading.html(headings[nextHeading].substring(0, t));
           await delay(75);
 
         }
-
+        /*
+        // Decided to not use the glitch effect at this time
         // run Glitch function if "I AM Code" is the heading
         if (headings[nextHeading] == "I AM Code" && $(window).width() > $phoneWidth) {
           iAmCodeJustCompleted = true;
@@ -101,6 +105,7 @@ const subheadingAnimation = async() => {
           // Extended delay after back to normal 
           await delay(1000)
         }
+        */
       } 
     }
   }
