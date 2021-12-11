@@ -278,9 +278,12 @@ ul {
 }
 
 .profileImage {
-  content: url('../images/profile_image_sm.jpg');
+  opacity: 1;
+  content: url('../images/profile_sm.png');
+  z-index: 1;
 }
 
+/*
 .glitchEffect {
   content: '';
   text-align:center;
@@ -344,7 +347,7 @@ ul {
     filter:hue-rotate(360deg);
   }
 }
-
+*/
 .icons {
   font-size: 4em;
   list-style-type: none;

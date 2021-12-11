@@ -7,9 +7,25 @@
   You do not need to upload the scss or css.map files to the website.
   They are just used to create the final css product. 
 */
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap"); /* using this one */
-@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap"); /* using this one */
-
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* manly primary styled */
+/* nice primary styled */
+/* very nice both smooth */
+/* meh for primary & Secondary */
+/* okay both smooth */
+/* nice ridged boxy, nice primary, very nice and clean secondary */
+/* Pixel, meh */
+/* nice for primary, smooth boxy */
+/* nice secondary boxy */
 #education section, #skills section, .gitHubCard {
   background-color: #12274b;
   border: 1px solid #091d3a;
@@ -252,119 +268,76 @@ ul {
 }
 
 .profileImage {
+  opacity: 1;
   content: url("../images/profile_sm.png");
+  z-index: 1;
 }
+
 /*
 .glitchEffect {
   content: '';
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align:center;
+  justify-content:center;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url("../images/profile_sm.png");
+  width:100%;
+  height:100%;
+  background: url('../images/profile_image_sm.jpg');
   background-size: cover;
 }
-
-.glitchEffect:before {
+.glitchEffect:before{
   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../images/profile_sm.png");
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: url('../images/profile_image_sm.jpg');
   background-size: cover;
-  mix-blend-mode: hard-light;
+  mix-blend-mode:hard-light;
+ 
 }
-
-.glitchEffect:before {
-  -webkit-animation: animate .4s;
-          animation: animate .4s;
+.glitchEffect:before{
+  animation:animate .4s;
+}
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+    filter:hue-rotate(0deg);
+  }
+  10%{
+    background-position: 4px 0px;
+  }
+  15%{
+    background-position: -8px 0px;
+  }
+  
+  20%{
+    background-position: -4px 0;
+  }
+  30%{
+    background-position: 12px 0;
+  }
+  40%{
+    background-position: -12px 0;
+  }
+  50%{
+    background-position: -20px 0;
+  }
+  60%{
+    background-position: 16px 0;
+  }
+  70%{
+    background-position: 0 22px;
+  }
+  80%{
+    background-position: -20px 10px;
+  }
+  100%{
+    background-position: 0 0;
+    filter:hue-rotate(360deg);
+  }
 }
 */
-@-webkit-keyframes animate {
-  0% {
-    background-position: 0 0;
-    -webkit-filter: hue-rotate(0deg);
-            filter: hue-rotate(0deg);
-  }
-  10% {
-    background-position: 4px 0px;
-  }
-  15% {
-    background-position: -8px 0px;
-  }
-  20% {
-    background-position: -4px 0;
-  }
-  30% {
-    background-position: 12px 0;
-  }
-  40% {
-    background-position: -12px 0;
-  }
-  50% {
-    background-position: -20px 0;
-  }
-  60% {
-    background-position: 16px 0;
-  }
-  70% {
-    background-position: 0 22px;
-  }
-  80% {
-    background-position: -20px 10px;
-  }
-  100% {
-    background-position: 0 0;
-    -webkit-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
-  }
-}
-
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-    -webkit-filter: hue-rotate(0deg);
-            filter: hue-rotate(0deg);
-  }
-  10% {
-    background-position: 4px 0px;
-  }
-  15% {
-    background-position: -8px 0px;
-  }
-  20% {
-    background-position: -4px 0;
-  }
-  30% {
-    background-position: 12px 0;
-  }
-  40% {
-    background-position: -12px 0;
-  }
-  50% {
-    background-position: -20px 0;
-  }
-  60% {
-    background-position: 16px 0;
-  }
-  70% {
-    background-position: 0 22px;
-  }
-  80% {
-    background-position: -20px 10px;
-  }
-  100% {
-    background-position: 0 0;
-    -webkit-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
-  }
-}
-
 .icons {
   font-size: 4em;
   list-style-type: none;
