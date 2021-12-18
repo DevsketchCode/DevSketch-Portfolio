@@ -501,6 +501,10 @@ footer {
   font-weight: bold;
 }
 
+.github-repo a:hover {
+  text-decoration: underline;
+}
+
 
 /* ---- DESKTOP ADJUST FOOTER ---- */
 @media only screen and (max-width: 1850px) {
