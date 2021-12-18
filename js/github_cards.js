@@ -7,7 +7,7 @@
     createGithubCard(gitUser, "l8_PawperingVetClinicCRM", "<i class='fa fa-paw' aria-hidden='true'></i> Pawpering Vet Clinic CRM", "pawpering_screenshot_lg.png" );
     createGithubCard(gitUser, "DevSketch-Portfolio", "My Portfolio", "" );
     createGithubCard(gitUser, "ASPNET_BetaAirlines", "Beta Airlines", "BetaAirlines_Plan.jpg" ); 
-    //createGithubCard(gitUser, "ASPNET_BetaAirlinesMVC", "Beta Airlines MVC", "" ); // Replace with ASP.NET MVC final project
+    createGithubCard(gitUser, "ASPNET_BetaAirlinesMVC", "Beta Airlines MVC", "BetaAirlinesMVC_07_User_BookAFlight.jpg" ); // Replace with ASP.NET MVC final project
     //createGithubCard(gitUser, "PHP Example", "PHP Example Goes Here", "" ); // Replace with PHP example when completed
     createGithubCard(gitUser, "XperienceThePhilippines", "Xperience The Philippines", "XperienceThePhilippines.jpg" );
     createGithubCard(gitUser, "RollerBallLab", "Roller Ball Escape!", "Screenshot_Level3.jpg" );
