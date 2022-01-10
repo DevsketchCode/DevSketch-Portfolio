@@ -377,7 +377,112 @@ footer {
   text-align: center;
 }
 
-#projects {
+/* Project Snapshots Carousel */
+.carousel-container {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+}
+
+#carousel-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 500px;
+}
+
+.carousel-images-bg {
+  width: 400px;
+  height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0.6;
+  z-index: -10;
+}
+
+.carousel-arrows {
+  /* also check #carousel-right-arrow and #carousel-left-arrow for specifics */
+  cursor: pointer;
+  opacity: 0.8;
+  font-family: Arial, san-serif;
+  font-size: 128px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 400px;
+}
+
+#carousel-left {
+  position: relative;
+}
+
+#carousel-left-arrow {
+  left: 100px;
+}
+
+.carousel-img-left {
+  position: relative;
+  left: 100px;
+}
+
+.carousel-img-center {
+  position: relative;
+  max-height: 500px;
+  width: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 1;
+  -webkit-box-shadow: 5px 5px 8px #000;
+          box-shadow: 5px 5px 8px #000;
+}
+
+#carousel-center-description {
+  background-color: white;
+  border-radius: 0px 0px 25px 25px;
+  color: #000;
+  margin: auto;
+  opacity: 1;
+  padding: 10px;
+  width: 400px;
+}
+
+#carousel-right {
+  position: relative;
+}
+
+#carousel-right-arrow {
+  right: 100px;
+}
+
+.carousel-img-right {
+  position: relative;
+  right: 100px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Github projects section */
+#github-projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -552,6 +657,25 @@ footer {
 }
 
 /* ---- TABLETS ---- */
+@media only screen and (max-width: 1600px) {
+  .carousel-container {
+    margin: 0;
+  }
+  #carousel-left, .carousel-img-left {
+    left: 100px;
+  }
+  #carousel-left-arrow {
+    left: 50px;
+  }
+  #carousel-right, .carousel-img-right {
+    right: 100px;
+  }
+  #carousel-right-arrow {
+    right: 50px;
+  }
+}
+
+/* ---- TABLETS ---- */
 @media only screen and (max-width: 1150px) {
   header {
     width: 90%;
@@ -567,6 +691,34 @@ footer {
   }
   #introduction {
     width: 80%;
+  }
+  .carousel-container {
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
+  #carousel-images {
+    height: auto;
+  }
+  .carousel-images-bg {
+    display: none;
+  }
+  .carousel-arrows {
+    top: 180px;
+    height: auto;
+    width: auto;
+    font-size: 96px;
+  }
+  #carousel-left-arrow {
+    left: 0px;
+  }
+  #carousel-right-arrow {
+    right: 0px;
+  }
+  .carousel-img-center {
+    width: 100%;
+  }
+  #carousel-center-description {
+    width: 95%;
   }
 }
 
@@ -620,6 +772,37 @@ footer {
   }
   .github-repo-image {
     width: 100%;
+  }
+  .carousel-arrows {
+    top: 150px;
+  }
+}
+
+/* ---- MOBILE PHONES ---- */
+@media only screen and (max-width: 740px) {
+  .carousel-arrows {
+    top: 160px;
+    font-size: 56px;
+  }
+  #carousel-left-arrow {
+    left: -50px;
+  }
+  #carousel-right-arrow {
+    right: -50px;
+  }
+}
+
+/* ---- MOBILE PHONES ---- */
+@media only screen and (max-width: 525px) {
+  .carousel-arrows {
+    top: 120px;
+    font-size: 56px;
+  }
+  #carousel-left-arrow {
+    left: -50px;
+  }
+  #carousel-right-arrow {
+    right: -50px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

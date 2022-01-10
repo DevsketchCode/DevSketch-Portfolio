@@ -51,7 +51,7 @@
 })();
 
 function createGithubCard(gitUser, repo, projectName, repoImage) {
-  projectDiv = $('#projects');
+  projectDiv = $('#github-projects');
   url = "https://github.com/" + gitUser + "/" + repo;
   repo = gitUser + "/" + repo;
 
