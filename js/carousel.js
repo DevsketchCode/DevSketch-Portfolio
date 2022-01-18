@@ -35,6 +35,7 @@ $(document).ready(function() {
   
   // Update Images On Click
   $("#carousel-left-arrow").click(function() {
+    $(this).stop();
     if($leftImage === 0) {
       $leftImage = $imageLinkArray.length-1;
     } else {
@@ -51,12 +52,18 @@ $(document).ready(function() {
       $rightImage = $rightImage - 1;  
     }
     // update images
-    $("#carousel-left-img").attr("src", $imageLinkArray[$leftImage]);
+    if($("#carousel-left-img").css('display') != "none") {
+      $("#carousel-left-img").stop(true, true).animate({"left": '+400'},300).attr("src", $imageLinkArray[$leftImage]).animate({"left": '+150'},300);
+    }
     $("#carousel-center-img").attr("src", $imageLinkArray[$centerImage]);
     $("#carousel-center-image-link").attr("href", $imageLinkArray[$centerImage]);
-    $("#carousel-center-description").html($imageLinkDescriptionArray[$centerImage]);    
-    $("#carousel-right-img").attr("src", $imageLinkArray[$rightImage]);
+    $("#carousel-center-description").html($imageLinkDescriptionArray[$centerImage]);  
+    
+    if($("#carousel-right-img").css('display') != "none") {
+      $("#carousel-right-img").stop(true, true).fadeOut(0).attr("src", $imageLinkArray[$rightImage]).animate({"right": '+400'},0).fadeIn(0).animate({"right": '+100'},300);
+    }
   });
+
   
   
   $("#carousel-right-arrow").click(function() {
@@ -75,12 +82,18 @@ $(document).ready(function() {
     } else {
       $rightImage = $rightImage + 1;  
     }
+    
     // update images
-    $("#carousel-left-img").attr("src", $imageLinkArray[$leftImage]);
+    if($("#carousel-left-img").css('display') != "none") {    
+      $("#carousel-left-img").stop(true, true).fadeOut(0).attr("src", $imageLinkArray[$leftImage]).animate({"left": '+400'},0).fadeIn(0).animate({"left": '+100'},300);
+    }
     $("#carousel-center-img").attr("src", $imageLinkArray[$centerImage]);
     $("#carousel-center-image-link").attr("href", $imageLinkArray[$centerImage]);  
     $("#carousel-center-description").html($imageLinkDescriptionArray[$centerImage]);    
-    $("#carousel-right-img").attr("src", $imageLinkArray[$rightImage]);
+
+    if($("#carousel-right-img").css('display') != "none") {
+      $("#carousel-right-img").stop(true, true).animate({"right": '+400'},300).attr("src", $imageLinkArray[$rightImage]).animate({"right": '+150'},300);
+    }
   });
 
 });
