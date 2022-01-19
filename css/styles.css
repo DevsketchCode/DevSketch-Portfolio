@@ -253,6 +253,10 @@ ul {
   margin: 5px;
 }
 
+#education li {
+  margin-left: 20px;
+}
+
 #cvtcLogo {
   width: 200px;
 }

@@ -4,14 +4,13 @@
 
 
     // The repos must be public in order for the information to be provided from github
-    createGithubCard(gitUser, "l8_PawperingVetClinicCRM", "<i class='fa fa-paw' aria-hidden='true'></i> Pawpering Vet Clinic CRM", "pawpering_screenshot_lg.png" );
-    createGithubCard(gitUser, "DevSketch-Portfolio", "My Portfolio", "" );
     createGithubCard(gitUser, "ASPNET_BetaAirlines", "Beta Airlines", "BetaAirlines_Plan.jpg" ); 
-    createGithubCard(gitUser, "ASPNET_BetaAirlinesMVC", "Beta Airlines MVC", "BetaAirlinesMVC_07_User_BookAFlight.jpg" ); // Replace with ASP.NET MVC final project
-    //createGithubCard(gitUser, "PHP Example", "PHP Example Goes Here", "" ); // Replace with PHP example when completed
+    createGithubCard(gitUser, "ASPNET_BetaAirlinesMVC", "Beta Airlines MVC", "BetaAirlinesMVC_07_User_BookAFlight.jpg" );
+    createGithubCard(gitUser, "l8_PawperingVetClinicCRM", "<i class='fa fa-paw' aria-hidden='true'></i> Pawpering Vet Clinic CRM", "pawpering_screenshot_lg.png" );    
+    createGithubCard(gitUser, "JavaWeb_FinalProject_MVCWebApplication_Movies", "Java Movie Application", "JavaMovieApplication.jpg" );    
     createGithubCard(gitUser, "XperienceThePhilippines", "Xperience The Philippines", "XperienceThePhilippines.jpg" );
     createGithubCard(gitUser, "RollerBallLab", "Roller Ball Escape!", "Screenshot_Level3.jpg" );
-    createGithubCard(gitUser, "JavaWeb_FinalProject_MVCWebApplication_Movies", "Java Movie Application", "JavaMovieApplication.jpg" );
+    createGithubCard(gitUser, "DevSketch-Portfolio", "My Portfolio", "" );    
 
     // Collapse all git image containers
     $('.gitImageContainer').hide();
@@ -56,7 +55,7 @@ function createGithubCard(gitUser, repo, projectName, repoImage) {
   repo = gitUser + "/" + repo;
 
   if (repoImage != "") {
-    viewImageDiv = '<div class="gitHubImageAvail"><a class="gitHubViewImageLink" href="#">View Screenshot</a></div>';
+    viewImageDiv = '<div class="gitHubImageAvail"><i class="fa fa-camera" aria-hidden="true"></i> <a class="gitHubViewImageLink" href="#">View Screenshot</a></div>';
     repoImage = 'images/' + repoImage;
     repoImageContainer = '<p class="github-card__meta gitImageContainer"><a href="' + repoImage + '" target="_blank"><img class="github-repo-image" src="' + repoImage + '"></a></p>';
   } else {
