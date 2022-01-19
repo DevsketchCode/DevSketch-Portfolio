@@ -35,7 +35,6 @@ $(document).ready(function() {
   
   // Update Images On Click
   $("#carousel-left-arrow").click(function() {
-    $(this).stop();
     if($leftImage === 0) {
       $leftImage = $imageLinkArray.length-1;
     } else {

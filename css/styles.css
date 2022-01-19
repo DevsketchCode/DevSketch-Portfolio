@@ -447,10 +447,35 @@ footer {
   background-color: white;
   border-radius: 0px 0px 25px 25px;
   color: #000;
+  font-size: 1em;
   margin: auto;
+  max-height: 100px;
   opacity: 1;
+  overflow: auto;
   padding: 10px;
   width: 400px;
+}
+
+#carousel-center-description::-webkit-scrollbar {
+  background-color: #7987b1;
+  width: 10px;
+}
+
+/* Track */
+#carousel-center-description::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px #7987b1;
+          box-shadow: inset 0 0 2px #7987b1;
+}
+
+/* Handle */
+#carousel-center-description::-webkit-scrollbar-thumb {
+  border: 1px solid #091d3a;
+  background-color: #416094;
+}
+
+/* Handle on hover */
+#carousel-center-description::-webkit-scrollbar-thumb:hover {
+  background-color: #3b4966;
 }
 
 #carousel-right {
@@ -666,6 +691,10 @@ footer {
   }
   #carousel-left-arrow {
     left: 50px;
+  }
+  #carousel-center-description {
+    font-size: 0.9em;
+    max-height: 60px;
   }
   #carousel-right, .carousel-img-right {
     right: 100px;
