@@ -21,7 +21,7 @@ $(function() {
 
       } else {
         $('#j' + job).css({"border-left-color":"#915d0a", "background-color":"#091d3a", "font-weight":"normal", "text-shadow":"none"});
-        $('#' + jobs[index].id).fadeOut(350);
+        $('#' + jobs[index].id).hide();
 
       }
     }); 
