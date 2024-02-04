@@ -7,7 +7,7 @@ $(function() {
 
   var jobs = $('.workExperienceContent');
 
-  $('#j1').css({"border-left-color":"#fca311", "background-color":"#416094", "font-weight":"600", "text-shadow":"2px 2px 2px #020c1b"});
+  $('#j1').addClass("workExperienceHighlight");
 
   $('#workExperience > ul li').click(function(e){
     var selectedLink = '#' + this.id + "_details";
@@ -16,16 +16,22 @@ $(function() {
     $(jobs).each(function(index){
       job = index+1;
       if (('#j' + job + "_details") == selectedLink) {
-        $('#j' + job).css({"border-left-color":"#fca311", "background-color":"#416094", "font-weight":"600", "text-shadow":"2px 2px 2px #020c1b"});
+        $('#j' + job).addClass("workExperienceHighlight");
+        $('#j' + job).removeClass("workExperienceNormal");
         $('#' + jobs[index].id).fadeIn(350);
 
       } else {
-        $('#j' + job).css({"border-left-color":"#915d0a", "background-color":"#091d3a", "font-weight":"normal", "text-shadow":"none"});
+        $('#j' + job).addClass("workExperienceNormal");
+        $('#j' + job).removeClass("workExperienceHighlight");
         $('#' + jobs[index].id).hide();
 
       }
     }); 
 
+  });
+
+  $('#workExperience > ul li').hover(function () {
+    $(this).toggleClass("workExperienceHover");
   });
 
  }).scroll(function() {
