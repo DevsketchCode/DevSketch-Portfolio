@@ -705,7 +705,7 @@ footer {
 /* ---- TABLETS ---- */
 @media only screen and (max-width: 1600px) {
   .carousel-container {
-    margin: 0;
+    margin: 0 auto;
   }
   #carousel-left, .carousel-img-left {
     left: 100px;
