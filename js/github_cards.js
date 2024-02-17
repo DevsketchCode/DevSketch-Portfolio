@@ -4,6 +4,7 @@
 
 
     // The repos must be public in order for the information to be provided from github
+    createGithubCard(gitUser, "AndroidDevelopment_FinalProject_ULearnIt", "U Learn It", "ULearnIt_FeatureGraphic.png" ); 
     createGithubCard(gitUser, "ASPNET_BetaAirlines", "Beta Airlines", "BetaAirlines_Plan.jpg" ); 
     createGithubCard(gitUser, "ASPNET_BetaAirlinesMVC", "Beta Airlines MVC", "BetaAirlinesMVC_07_User_BookAFlight.jpg" );
     createGithubCard(gitUser, "l8_PawperingVetClinicCRM", "<i class='fa fa-paw' aria-hidden='true'></i> Pawpering Vet Clinic CRM", "pawpering_screenshot_lg.png" );    
